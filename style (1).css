@@ -1,0 +1,635 @@
+/* =========================
+   1. CORES DO PROJETO
+========================= */
+
+:root {
+    --cor-principal: #5BAE9B;
+    --cor-destaque: #F6C85F;
+    --cor-fundo: #FFF8ED;
+    --cor-texto: #5B4636;
+    --branco: #FFFFFF;
+}
+
+
+/* =========================
+   2. CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+}
+
+
+/* =========================
+   3. LINKS
+========================= */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   4. CABEÇALHO
+========================= */
+
+header {
+    background-color: var(--branco);
+    padding: 20px 6%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--cor-principal);
+}
+
+
+/* MENU */
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav ul a {
+    font-weight: 500;
+}
+
+nav ul a:hover {
+    color: var(--cor-principal);
+}
+
+
+/* =========================
+   5. BOTÃO
+========================= */
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    background-color: var(--cor-principal);
+    color: var(--branco);
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto);
+}
+
+
+/* =========================
+   6. PRIMEIRA SEÇÃO
+========================= */
+
+#inicio {
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 60px 8%;
+}
+
+
+/* TEXTO DO HERO */
+
+#inicio div {
+    max-width: 600px;
+}
+
+#inicio p:first-child {
+    color: var(--cor-principal);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#inicio h1 {
+    font-size: 50px;
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+#inicio p:nth-of-type(2) {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   HERO COM IMAGEM
+========================= */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.hero-image {
+    width: 50%;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 30px;
+    display: block;
+}
+/* =========================
+   SERVIÇOS
+========================= */
+
+#servicos {
+    text-align: center;
+    padding: 80px 8%;
+}
+
+.subtitulo {
+    color: var(--cor-principal);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#servicos h2 {
+    font-size: 38px;
+    margin-bottom: 40px;
+}
+
+
+/* GRID DOS CARDS */
+
+.servicos-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+
+/* CARD */
+
+.card-servico {
+    background-color: var(--branco);
+
+    padding: 35px 25px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+
+/* EFEITO AO PASSAR O MOUSE */
+
+.card-servico:hover {
+    transform: translateY(-8px);
+}
+
+
+/* ÍCONE */
+
+.icone {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+
+/* TÍTULO */
+
+.card-servico h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+
+/* DESCRIÇÃO */
+
+.card-servico p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+/* LINK */
+
+.link-servico {
+    color: var(--cor-principal);
+    font-weight: bold;
+}
+/* =========================
+   EQUIPE
+========================= */
+
+#equipe {
+    text-align: center;
+    padding: 80px 8%;
+    background-color: var(--branco);
+}
+
+.texto-secao {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+
+/* CONTAINER */
+
+.equipe-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    max-width: 1100px;
+    margin: 40px auto 0;
+}
+
+
+/* CARD */
+
+.card-equipe {
+    background-color: var(--cor-fundo);
+    padding: 25px;
+    border-radius: 20px;
+
+    transition: 0.3s;
+}
+
+
+/* EFEITO DO CARD */
+
+.card-equipe:hover {
+    transform: translateY(-8px);
+}
+
+
+/* FOTO */
+
+.card-equipe img {
+    width: 150px;
+    height: 150px;
+/*NÃO DEFORMA A IMAGEM*/
+    object-fit: cover;
+/*DEIXA A IMAGEM REDONDA*/
+    border-radius: 50%;
+
+    margin-bottom: 20px;
+}
+
+
+/* NOME */
+
+.card-equipe h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+
+/* PROFISSÃO */
+
+.cargo {
+    color: var(--cor-principal);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+/* DESCRIÇÃO */
+
+.card-equipe > p:last-child {
+    line-height: 1.5;
+}
+/* =========================
+   DIFERENCIAIS
+========================= */
+
+#diferenciais {
+    text-align: center;
+    padding: 80px 8%;
+    background-color: var(--cor-fundo);
+}
+
+.diferenciais-container {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 60px;
+
+    max-width: 1100px;
+
+    margin: 40px auto 0;
+}
+
+
+/* CARD */
+
+.diferencial {
+    background-color: var(--branco);
+
+    padding: 30px 20px;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+}
+
+
+/* EFEITO */
+
+.diferencial:hover {
+    transform: translateY(-8px);
+}
+
+
+/* ÍCONE */
+
+.icone-diferencial {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+
+/* TÍTULO */
+
+.diferencial h3 {
+    font-size: 20px;
+
+    margin-bottom: 12px;
+}
+
+
+/* TEXTO */
+
+.diferencial p {
+    line-height: 1.5;
+}
+/* =========================
+   AVALIAÇÕES
+========================= */
+
+#avaliacoes {
+    text-align: center;
+    padding: 80px 8%;
+    background-color: var(--branco);
+}
+
+.avaliacoes-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    max-width: 1100px;
+
+    margin: 40px auto 0;
+}
+
+
+/* CARD */
+
+.card-avaliacao {
+    background-color: var(--cor-fundo);
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    text-align: left;
+
+    transition: 0.3s;
+}
+
+
+/* HOVER */
+
+.card-avaliacao:hover {
+    transform: translateY(-8px);
+}
+
+
+/* ESTRELAS */
+
+.estrelas {
+    color: var(--cor-destaque);
+
+    font-size: 22px;
+
+    margin-bottom: 20px;
+}
+
+
+/* DEPOIMENTO */
+
+.card-avaliacao > p {
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+
+/* NOME */
+
+.card-avaliacao h3 {
+    margin-bottom: 5px;
+}
+
+
+/* PET */
+
+.card-avaliacao span {
+    color: var(--cor-principal);
+
+    font-size: 14px;
+}
+/* =========================
+   AGENDAMENTO
+========================= */
+
+#agendamento {
+    background-color: var(--cor-fundo);
+    padding: 80px 8%;
+    text-align: center;
+}
+
+
+/* FORMULÁRIO */
+
+#form-agendamento {
+    max-width: 650px;
+    margin: 40px auto 0;
+
+    background-color: var(--branco);
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+
+    text-align: left;
+}
+
+
+/* CAMPO */
+
+.campo {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 20px;
+}
+
+
+/* LABEL */
+
+.campo label {
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+/* INPUTS */
+
+.campo input,
+.campo select,
+.campo textarea {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+/* QUANDO O USUÁRIO CLICA NO CAMPO */
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+
+    border-color: var(--cor-principal);
+}
+
+
+/* TEXTAREA */
+
+.campo textarea {
+    resize: vertical;
+}
+
+
+/* BOTÃO */
+
+.btn-formulario {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background-color: var(--cor-principal);
+
+    color: var(--branco);
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.btn-formulario:hover {
+
+    background-color: var(--cor-destaque);
+
+    color: var(--cor-texto);
+}
+
+
+/* MENSAGEM */
+
+#mensagem-agendamento {
+    margin-top: 20px;
+
+    font-weight: bold;
+}
+
+#localizacao {
+    text-align: center;
+    padding: 80px 8%;
+}
+
+
+.mapa {
+    max-width: 550px;
+    margin: 10px auto 50px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+}
+/* =========================
+       RODAPÉ 
+ ========================= */ 
+footer { 
+    background-color: var(--cor-principal); 
+    color: var(--branco); 
+    text-align: center; 
+    padding: 30px; }
